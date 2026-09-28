@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Complete Profile | YUVA SETU</title>
+
+    <link rel="stylesheet" href="student.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+
+<body class="profile-body">
+
+
+<!-- =========================
+     TOP NAVBAR
+========================= -->
+
+<nav class="student-nav">
+
+    <a href="../index.html" class="student-brand">
+        YUVA <span>SETU</span>
+    </a>
+
+    <div class="student-nav-right">
+
+        <span class="portal-label">
+            Student Portal
+        </span>
+
+        <button
+            class="logout-btn"
+            id="logoutBtn"
+        >
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Logout
+        </button>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================
+     PROFILE PAGE
+========================= -->
+
+<main class="profile-page">
+
+    <div class="profile-header">
+
+        <div>
+
+            <span class="profile-tag">
+                STUDENT ONBOARDING
+            </span>
+
+            <h1>
+                Complete Your
+                <span>Profile</span>
+            </h1>
+
+            <p>
+                Tell us about your education and preferred
+                location so YUVA SETU can generate
+                district-specific skill recommendations.
+            </p>
+
+        </div>
+
+
+        <div class="profile-progress">
+
+            <div class="progress-number">
+                01
+            </div>
+
+            <div>
+                <strong>
+                    Profile Setup
+                </strong>
+
+                <span>
+                    Step 1 of 4
+                </span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="profile-layout">
+
+
+        <!-- LEFT INFO CARD -->
+
+        <aside class="profile-summary">
+
+            <div class="profile-avatar">
+
+                <i class="fa-solid fa-user-graduate"></i>
+
+            </div>
+
+
+            <h3 id="summaryName">
+                Student
+            </h3>
+
+            <p id="summaryEmail">
+                student@example.com
+            </p>
+
+
+            <div class="journey-list">
+
+                <div class="journey active">
+
+                    <span>
+                        1
+                    </span>
+
+                    <div>
+                        <strong>
+                            Profile
+                        </strong>
+
+                        <small>
+                            Education & location
+                        </small>
+                    </div>
+
+                </div>
+
+
+                <div class="journey">
+
+                    <span>
+                        2
+                    </span>
+
+                    <div>
+                        <strong>
+                            Skills
+                        </strong>
+
+                        <small>
+                            Current skill set
+                        </small>
+                    </div>
+
+                </div>
+
+
+                <div class="journey">
+
+                    <span>
+                        3
+                    </span>
+
+                    <div>
+                        <strong>
+                            Target Job
+                        </strong>
+
+                        <small>
+                            Career preference
+                        </small>
+                    </div>
+
+                </div>
+
+
+                <div class="journey">
+
+                    <span>
+                        4
+                    </span>
+
+                    <div>
+                        <strong>
+                            Skill Match
+                        </strong>
+
+                        <small>
+                            Readiness analysis
+                        </small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- FORM -->
+
+        <section class="profile-form-card">
+
+            <div class="profile-card-heading">
+
+                <span>
+                    PERSONAL & ACADEMIC DETAILS
+                </span>
+
+                <h2>
+                    Student Information
+                </h2>
+
+            </div>
+
+
+            <form id="profileForm">
+
+
+                <!-- NAME -->
+
+                <div class="profile-grid">
+
+                    <div class="profile-field">
+
+                        <label>
+                            Full Name
+                        </label>
+
+                        <div class="profile-input">
+
+                            <i class="fa-solid fa-user"></i>
+
+                            <input
+                                type="text"
+                                id="profileName"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PHONE -->
+
+                    <div class="profile-field">
+
+                        <label>
+                            Mobile Number
+                        </label>
+
+                        <div class="profile-input">
+
+                            <i class="fa-solid fa-phone"></i>
+
+                            <input
+                                type="tel"
+                                id="profilePhone"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- EMAIL -->
+
+                <div class="profile-field">
+
+                    <label>
+                        Email Address
+                    </label>
+
+                    <div class="profile-input">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <input
+                            type="email"
+                            id="profileEmail"
+                            readonly
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- EDUCATION / COURSE -->
+
+                <div class="profile-grid">
+
+                    <div class="profile-field">
+
+                        <label>
+                            Education Level
+                        </label>
+
+                        <div class="profile-input">
+
+                            <i class="fa-solid fa-graduation-cap"></i>
+
+                            <select
+                                id="educationLevel"
+                                required
+                            >
+
+                                <option value="">
+                                    Select Education
+                                </option>
+
+                                <option value="Diploma">
+                                    Diploma
+                                </option>
+
+                                <option value="Undergraduate">
+                                    Undergraduate
+                                </option>
+
+                                <option value="Postgraduate">
+                                    Postgraduate
+                                </option>
+
+                                <option value="ITI">
+                                    ITI
+                                </option>
+
+                                <option value="Other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="profile-field">
+
+                        <label>
+                            Course
+                        </label>
+
+                        <div class="profile-input">
+
+                            <i class="fa-solid fa-book-open"></i>
+
+                            <select
+                                id="course"
+                                required
+                            >
+
+                                <option value="">
+                                    Select Course
+                                </option>
+
+                                <option value="B.Tech">
+                                    B.Tech
+                                </option>
+
+                                <option value="BCA">
+                                    BCA
+                                </option>
+
+                                <option value="B.Sc">
+                                    B.Sc
+                                </option>
+
+                                <option value="BBA">
+                                    BBA
+                                </option>
+
+                                <option value="Diploma">
+                                    Diploma
+                                </option>
+
+                                <option value="ITI">
+                                    ITI
+                                </option>
+
+                                <option value="Other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- BRANCH / YEAR -->
+
+                <div class="profile-grid">
+
+                    <div class="profile-field">
+
+                        <label>
+                            Branch / Specialization
+                        </label>
+
+                        <div class="profile-input">
+
+                            <i class="fa-solid fa-code-branch"></i>
+
+                            <select
+                                id="branch"
+                                required
+                            >
+
+                                <option value="">
+                                    Select Branch
+                                </option>
+
+                                <option value="Computer Science">
+                                    Computer Science
+                                </option>
+
+                                <option value="Electronics & Instrumentation">
+                                    Electronics & Instrumentation
+                                </option>
+
+                                <option value="Electronics & Communication">
+                                    Electronics & Communication
+                                </option>
+
+                                <option value="Mechanical Engineering">
+                                    Mechanical Engineering
+                                </option>
+
+                                <option value="Electrical Engineering">
+                                    Electrical Engineering
+                                </option>
+
+                                <option value="Civil Engineering">
+                                    Civil Engineering
+                                </option>
+
+                                <option value="Biotechnology">
+                                    Biotechnology
+                                </option>
+
+                                <option value="Biomedical">
+                                    Biomedical
+                                </option>
+
+                                <option value="Food Technology">
+                                    Food Technology
+                                </option>
+
+                                <option value="Other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="profile-field">
+
+                        <label>
+                            Current Year
+                        </label>
+
+                        <div class="profile-input">
+
+                            <i class="fa-solid fa-calendar"></i>
+
+                            <select
+                                id="studyYear"
+                                required
+                            >
+
+                                <option value="">
+                                    Select Year
+                                </option>
+
+                                <option value="1st Year">
+                                    1st Year
+                                </option>
+
+                                <option value="2nd Year">
+                                    2nd Year
+                                </option>
+
+                                <option value="3rd Year">
+                                    3rd Year
+                                </option>
+
+                                <option value="4th Year">
+                                    4th Year
+                                </option>
+
+                                <option value="Passed Out">
+                                    Passed Out
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- STATE / DISTRICT -->
+
+                <div class="profile-grid">
+
+                    <div class="profile-field">
+
+                        <label>
+                            Preferred State
+                        </label>
+
+                        <div class="profile-input">
+
+                            <i class="fa-solid fa-map"></i>
+
+                            <select
+                                id="state"
+                                required
+                            >
+
+                                <option value="">
+                                    Select State
+                                </option>
+
+                                <option value="Uttar Pradesh">
+                                    Uttar Pradesh
+                                </option>
+
+                                <option value="Maharashtra">
+                                    Maharashtra
+                                </option>
+
+                                <option value="Haryana">
+                                    Haryana
+                                </option>
+
+                                <option value="Delhi">
+                                    Delhi
+                                </option>
+
+                                <option value="Punjab">
+                                    Punjab
+                                </option>
+
+                                <option value="Karnataka">
+                                    Karnataka
+                                </option>
+
+                                <option value="Other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="profile-field">
+
+                        <label>
+                            Preferred District
+                        </label>
+
+                        <div class="profile-input">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            <select
+                                id="district"
+                                required
+                            >
+
+                                <option value="">
+                                    Select District
+                                </option>
+
+                                <option value="Jhansi">
+                                    Jhansi
+                                </option>
+
+                                <option value="Lucknow">
+                                    Lucknow
+                                </option>
+
+                                <option value="Kanpur">
+                                    Kanpur
+                                </option>
+
+                                <option value="Noida">
+                                    Noida
+                                </option>
+
+                                <option value="Gurugram">
+                                    Gurugram
+                                </option>
+
+                                <option value="Pune">
+                                    Pune
+                                </option>
+
+                                <option value="Bengaluru">
+                                    Bengaluru
+                                </option>
+
+                                <option value="Other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="profileMessage"
+                    class="form-message"
+                ></div>
+
+
+                <div class="profile-action">
+
+                    <button
+                        type="submit"
+                        class="profile-save-btn"
+                    >
+
+                        Save & Continue
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                </div>
+
+
+            </form>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+<script src="student.js"></script>
+
+</body>
+</html>
