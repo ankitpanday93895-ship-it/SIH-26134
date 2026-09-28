@@ -421,3 +421,17 @@ input{
     }
 
 }
+.form-message{
+    min-height:20px;
+    margin:-5px 0 15px;
+    font-size:.78rem;
+    font-weight:600;
+}
+
+.form-message.error{
+    color:#dc2626;
+}
+
+.form-message.success{
+    color:#16a34a;
+}
