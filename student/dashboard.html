@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Student Dashboard | YUVA SETU</title>
+
+    <link rel="stylesheet" href="student.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+
+<body class="dashboard-body">
+
+
+<!-- =========================
+     TOP NAVBAR
+========================= -->
+
+<nav class="student-nav">
+
+    <a href="../index.html" class="student-brand">
+        YUVA <span>SETU</span>
+    </a>
+
+    <div class="student-nav-right">
+
+        <span class="portal-label">
+            Student Portal
+        </span>
+
+        <button
+            class="logout-btn"
+            id="logoutBtn"
+        >
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Logout
+        </button>
+
+    </div>
+
+</nav>
+
+
+<div class="student-dashboard-layout">
+
+
+    <!-- =========================
+         SIDEBAR
+    ========================= -->
+
+    <aside class="student-sidebar">
+
+        <div class="sidebar-profile">
+
+            <div class="sidebar-avatar">
+                <i class="fa-solid fa-user-graduate"></i>
+            </div>
+
+            <div>
+
+                <strong id="dashboardStudentName">
+                    Student
+                </strong>
+
+                <span id="dashboardStudentBranch">
+                    Student Profile
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-menu">
+
+            <a
+                href="dashboard.html"
+                class="sidebar-link active"
+            >
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+            </a>
+
+
+            <a
+                href="profile.html"
+                class="sidebar-link"
+            >
+                <i class="fa-solid fa-user"></i>
+                My Profile
+            </a>
+
+
+            <a
+                href="skills.html"
+                class="sidebar-link"
+            >
+                <i class="fa-solid fa-layer-group"></i>
+                My Skills
+            </a>
+
+
+            <a
+                href="target-job.html"
+                class="sidebar-link"
+            >
+                <i class="fa-solid fa-bullseye"></i>
+                Target Job
+            </a>
+
+
+            <a
+                href="skill-gap.html"
+                class="sidebar-link"
+            >
+                <i class="fa-solid fa-code-compare"></i>
+                Skill Gap
+            </a>
+
+
+            <a
+                href="learning-path.html"
+                class="sidebar-link"
+            >
+                <i class="fa-solid fa-route"></i>
+                Learning Path
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+
+    <!-- =========================
+         MAIN DASHBOARD
+    ========================= -->
+
+    <main class="student-dashboard-main">
+
+
+        <!-- WELCOME -->
+
+        <section class="dashboard-welcome">
+
+            <div>
+
+                <span class="dashboard-eyebrow">
+                    STUDENT DASHBOARD
+                </span>
+
+                <h1>
+                    Hello,
+                    <span id="welcomeStudentName">
+                        Student
+                    </span>
+                    👋
+                </h1>
+
+                <p>
+                    Track your skills, explore district demand
+                    and improve your job readiness.
+                </p>
+
+            </div>
+
+
+            <a
+                href="profile.html"
+                class="edit-profile-btn"
+            >
+                <i class="fa-solid fa-pen"></i>
+                Edit Profile
+            </a>
+
+        </section>
+
+
+
+        <!-- PROFILE STATUS -->
+
+        <section class="profile-status-card">
+
+            <div class="status-icon">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+
+            <div>
+
+                <strong>
+                    Profile Completed
+                </strong>
+
+                <p>
+                    Your academic and location details
+                    are ready for skill matching.
+                </p>
+
+            </div>
+
+            <span>
+                Completed
+            </span>
+
+        </section>
+
+
+
+        <!-- METRIC CARDS -->
+
+        <section class="student-metrics">
+
+
+            <article class="student-metric-card">
+
+                <div class="student-metric-top">
+
+                    <div class="student-metric-icon">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+
+                    <span>
+                        Target Role
+                    </span>
+
+                </div>
+
+                <strong id="dashboardTargetRole">
+                    Not Selected
+                </strong>
+
+                <a href="target-job.html">
+                    Choose Role
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+
+
+            <article class="student-metric-card">
+
+                <div class="student-metric-top">
+
+                    <div class="student-metric-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+
+                    <span>
+                        Preferred District
+                    </span>
+
+                </div>
+
+                <strong id="dashboardDistrict">
+                    Not Selected
+                </strong>
+
+                <a href="profile.html">
+                    Update Location
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+
+
+            <article class="student-metric-card">
+
+                <div class="student-metric-top">
+
+                    <div class="student-metric-icon">
+                        <i class="fa-solid fa-chart-pie"></i>
+                    </div>
+
+                    <span>
+                        Job Readiness
+                    </span>
+
+                </div>
+
+                <strong id="dashboardMatchScore">
+                    --
+                </strong>
+
+                <span class="metric-note">
+                    Complete skill matching
+                </span>
+
+            </article>
+
+
+
+            <article class="student-metric-card">
+
+                <div class="student-metric-top">
+
+                    <div class="student-metric-icon">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+
+                    <span>
+                        My Skills
+                    </span>
+
+                </div>
+
+                <strong id="dashboardSkillCount">
+                    0
+                </strong>
+
+                <a href="skills.html">
+                    Add Skills
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+        </section>
+
+
+
+        <!-- MAIN DASHBOARD GRID -->
+
+        <section class="student-dashboard-grid">
+
+
+            <!-- READINESS CARD -->
+
+            <article class="student-panel readiness-panel">
+
+                <div class="student-panel-heading">
+
+                    <div>
+
+                        <span>
+                            MATCHING ENGINE
+                        </span>
+
+                        <h2>
+                            Job Readiness
+                        </h2>
+
+                    </div>
+
+
+                    <div class="engine-badge">
+                        AI-Enabled
+                    </div>
+
+                </div>
+
+
+                <div class="readiness-content">
+
+
+                    <div class="readiness-circle">
+
+                        <div>
+
+                            <strong id="readinessCircleScore">
+                                --
+                            </strong>
+
+                            <span>
+                                Match
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="readiness-details">
+
+                        <h3 id="readinessMessage">
+                            Complete your skill profile
+                        </h3>
+
+                        <p>
+                            Add your current skills and select
+                            a target role to calculate your
+                            weighted job-readiness score.
+                        </p>
+
+
+                        <div class="readiness-actions">
+
+                            <a
+                                href="skills.html"
+                                class="dashboard-primary-btn"
+                            >
+                                Add My Skills
+                            </a>
+
+                            <a
+                                href="target-job.html"
+                                class="dashboard-secondary-btn"
+                            >
+                                Choose Target Job
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- STUDENT PROFILE SUMMARY -->
+
+            <article class="student-panel">
+
+                <div class="student-panel-heading">
+
+                    <div>
+
+                        <span>
+                            PROFILE
+                        </span>
+
+                        <h2>
+                            Academic Details
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-detail-list">
+
+
+                    <div>
+
+                        <span>
+                            Course
+                        </span>
+
+                        <strong id="dashboardCourse">
+                            --
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Branch
+                        </span>
+
+                        <strong id="dashboardBranch">
+                            --
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Current Year
+                        </span>
+
+                        <strong id="dashboardYear">
+                            --
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            State
+                        </span>
+
+                        <strong id="dashboardState">
+                            --
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            District
+                        </span>
+
+                        <strong id="dashboardDistrictDetail">
+                            --
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+
+        <!-- NEXT ACTIONS -->
+
+        <section class="next-actions-section">
+
+            <div class="student-panel-heading">
+
+                <div>
+
+                    <span>
+                        NEXT STEPS
+                    </span>
+
+                    <h2>
+                        Complete Your Skill Analysis
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="next-action-grid">
+
+
+                <a
+                    href="skills.html"
+                    class="next-action-card"
+                >
+
+                    <span>
+                        01
+                    </span>
+
+                    <i class="fa-solid fa-layer-group"></i>
+
+                    <h3>
+                        Add Current Skills
+                    </h3>
+
+                    <p>
+                        Tell YUVA SETU what skills
+                        you already know.
+                    </p>
+
+                </a>
+
+
+
+                <a
+                    href="target-job.html"
+                    class="next-action-card"
+                >
+
+                    <span>
+                        02
+                    </span>
+
+                    <i class="fa-solid fa-bullseye"></i>
+
+                    <h3>
+                        Choose Target Job
+                    </h3>
+
+                    <p>
+                        Select the job role you
+                        want to prepare for.
+                    </p>
+
+                </a>
+
+
+
+                <div class="next-action-card locked-action">
+
+                    <span>
+                        03
+                    </span>
+
+                    <i class="fa-solid fa-code-compare"></i>
+
+                    <h3>
+                        Run Skill Match
+                    </h3>
+
+                    <p>
+                        Compare your skills with
+                        industry requirements.
+                    </p>
+
+                </div>
+
+
+
+                <div class="next-action-card locked-action">
+
+                    <span>
+                        04
+                    </span>
+
+                    <i class="fa-solid fa-route"></i>
+
+                    <h3>
+                        Learning Path
+                    </h3>
+
+                    <p>
+                        Get recommended skills
+                        based on identified gaps.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- DISTRICT INTELLIGENCE PREVIEW -->
+
+        <section class="student-panel district-preview">
+
+            <div class="student-panel-heading">
+
+                <div>
+
+                    <span>
+                        DISTRICT INTELLIGENCE
+                    </span>
+
+                    <h2>
+                        Local Skill Demand
+                    </h2>
+
+                </div>
+
+                <div
+                    class="district-pill"
+                    id="districtPill"
+                >
+                    District
+                </div>
+
+            </div>
+
+
+            <div class="district-preview-empty">
+
+                <div>
+                    <i class="fa-solid fa-chart-column"></i>
+                </div>
+
+                <h3>
+                    District demand analysis
+                </h3>
+
+                <p>
+                    Skill-demand charts will appear here
+                    after we connect the district demand engine.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+<script src="student.js"></script>
+
+</body>
+
+</html>
