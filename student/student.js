@@ -448,3 +448,254 @@ if(logoutBtn){
     });
 
 }
+// =====================================
+// STUDENT DASHBOARD
+// =====================================
+
+const dashboardStudentName =
+    document.getElementById(
+        "dashboardStudentName"
+    );
+
+
+if(dashboardStudentName){
+
+    // Login Protection
+
+    const loggedIn =
+        localStorage.getItem(
+            "studentLoggedIn"
+        );
+
+
+    if(loggedIn !== "true"){
+
+        window.location.href =
+            "login.html";
+
+    }
+
+
+    const student =
+        JSON.parse(
+            localStorage.getItem(
+                "yuvaSetuStudent"
+            )
+        );
+
+
+    if(!student){
+
+        window.location.href =
+            "register.html";
+
+    }
+    else{
+
+
+        // =========================
+        // STUDENT NAME
+        // =========================
+
+        const firstName =
+            student.name
+                ? student.name.split(" ")[0]
+                : "Student";
+
+
+        document.getElementById(
+            "dashboardStudentName"
+        ).textContent =
+            student.name || "Student";
+
+
+        document.getElementById(
+            "welcomeStudentName"
+        ).textContent =
+            firstName;
+
+
+
+        // =========================
+        // SIDEBAR BRANCH
+        // =========================
+
+        document.getElementById(
+            "dashboardStudentBranch"
+        ).textContent =
+            student.branch ||
+            "Student Profile";
+
+
+
+        // =========================
+        // TARGET ROLE
+        // =========================
+
+        document.getElementById(
+            "dashboardTargetRole"
+        ).textContent =
+            student.targetJob ||
+            "Not Selected";
+
+
+
+        // =========================
+        // DISTRICT
+        // =========================
+
+        document.getElementById(
+            "dashboardDistrict"
+        ).textContent =
+            student.district ||
+            "Not Selected";
+
+
+        document.getElementById(
+            "dashboardDistrictDetail"
+        ).textContent =
+            student.district ||
+            "--";
+
+
+        document.getElementById(
+            "districtPill"
+        ).textContent =
+            student.district ||
+            "District";
+
+
+
+        // =========================
+        // COURSE
+        // =========================
+
+        document.getElementById(
+            "dashboardCourse"
+        ).textContent =
+            student.course ||
+            "--";
+
+
+
+        // =========================
+        // BRANCH
+        // =========================
+
+        document.getElementById(
+            "dashboardBranch"
+        ).textContent =
+            student.branch ||
+            "--";
+
+
+
+        // =========================
+        // YEAR
+        // =========================
+
+        document.getElementById(
+            "dashboardYear"
+        ).textContent =
+            student.year ||
+            "--";
+
+
+
+        // =========================
+        // STATE
+        // =========================
+
+        document.getElementById(
+            "dashboardState"
+        ).textContent =
+            student.state ||
+            "--";
+
+
+
+        // =========================
+        // SKILLS
+        // =========================
+
+        const skillCount =
+            Array.isArray(student.skills)
+                ? student.skills.length
+                : 0;
+
+
+        document.getElementById(
+            "dashboardSkillCount"
+        ).textContent =
+            skillCount;
+
+
+
+        // =========================
+        // MATCH SCORE
+        // =========================
+
+        if(
+            student.matchScore !== undefined &&
+            student.matchScore !== null
+        ){
+
+            const score =
+                Math.round(
+                    student.matchScore
+                );
+
+
+            document.getElementById(
+                "dashboardMatchScore"
+            ).textContent =
+                score + "%";
+
+
+            document.getElementById(
+                "readinessCircleScore"
+            ).textContent =
+                score + "%";
+
+
+            const readinessCircle =
+                document.querySelector(
+                    ".readiness-circle"
+                );
+
+
+            if(readinessCircle){
+
+                readinessCircle.style.background =
+                    `conic-gradient(
+                        #1264e5 0% ${score}%,
+                        #dce6f5 ${score}% 100%
+                    )`;
+
+            }
+
+
+            document.getElementById(
+                "readinessMessage"
+            ).textContent =
+                "Your current job readiness";
+
+        }
+        else{
+
+            document.getElementById(
+                "dashboardMatchScore"
+            ).textContent =
+                "--";
+
+
+            document.getElementById(
+                "readinessCircleScore"
+            ).textContent =
+                "--";
+
+        }
+
+    }
+
+}
