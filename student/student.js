@@ -226,3 +226,225 @@ if(loginForm){
     });
 
 }
+// =====================================
+// PROFILE PAGE
+// =====================================
+
+const profileForm =
+    document.getElementById("profileForm");
+
+
+if(profileForm){
+
+    const student =
+        JSON.parse(
+            localStorage.getItem("yuvaSetuStudent")
+        );
+
+
+    // User direct profile page open kare
+    // without registration
+
+    if(!student){
+
+        window.location.href =
+            "register.html";
+
+    }
+    else{
+
+        // Existing registration data show
+
+        document.getElementById("profileName").value =
+            student.name || "";
+
+        document.getElementById("profileEmail").value =
+            student.email || "";
+
+        document.getElementById("profilePhone").value =
+            student.phone || "";
+
+
+        document.getElementById("summaryName").textContent =
+            student.name || "Student";
+
+        document.getElementById("summaryEmail").textContent =
+            student.email || "";
+
+
+        // Previously saved profile values
+
+        if(student.education){
+
+            document.getElementById("educationLevel").value =
+                student.education;
+
+        }
+
+
+        if(student.course){
+
+            document.getElementById("course").value =
+                student.course;
+
+        }
+
+
+        if(student.branch){
+
+            document.getElementById("branch").value =
+                student.branch;
+
+        }
+
+
+        if(student.year){
+
+            document.getElementById("studyYear").value =
+                student.year;
+
+        }
+
+
+        if(student.state){
+
+            document.getElementById("state").value =
+                student.state;
+
+        }
+
+
+        if(student.district){
+
+            document.getElementById("district").value =
+                student.district;
+
+        }
+
+    }
+
+
+    profileForm.addEventListener(
+        "submit",
+        function(event){
+
+            event.preventDefault();
+
+
+            const currentStudent =
+                JSON.parse(
+                    localStorage.getItem(
+                        "yuvaSetuStudent"
+                    )
+                );
+
+
+            currentStudent.name =
+                document
+                    .getElementById("profileName")
+                    .value
+                    .trim();
+
+
+            currentStudent.phone =
+                document
+                    .getElementById("profilePhone")
+                    .value
+                    .trim();
+
+
+            currentStudent.education =
+                document
+                    .getElementById("educationLevel")
+                    .value;
+
+
+            currentStudent.course =
+                document
+                    .getElementById("course")
+                    .value;
+
+
+            currentStudent.branch =
+                document
+                    .getElementById("branch")
+                    .value;
+
+
+            currentStudent.year =
+                document
+                    .getElementById("studyYear")
+                    .value;
+
+
+            currentStudent.state =
+                document
+                    .getElementById("state")
+                    .value;
+
+
+            currentStudent.district =
+                document
+                    .getElementById("district")
+                    .value;
+
+
+            currentStudent.profileCompleted =
+                true;
+
+
+            localStorage.setItem(
+                "yuvaSetuStudent",
+                JSON.stringify(currentStudent)
+            );
+
+
+            const profileMessage =
+                document.getElementById(
+                    "profileMessage"
+                );
+
+
+            profileMessage.textContent =
+                "Profile saved successfully.";
+
+            profileMessage.className =
+                "form-message success";
+
+
+            setTimeout(() => {
+
+                window.location.href =
+                    "dashboard.html";
+
+            }, 800);
+
+        }
+    );
+
+}
+
+
+
+// =====================================
+// LOGOUT
+// =====================================
+
+const logoutBtn =
+    document.getElementById("logoutBtn");
+
+
+if(logoutBtn){
+
+    logoutBtn.addEventListener("click", () => {
+
+        localStorage.removeItem(
+            "studentLoggedIn"
+        );
+
+        window.location.href =
+            "login.html";
+
+    });
+
+}
