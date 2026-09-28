@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>YUVA SETU | Skills & Curriculum Intelligence</title>
+
+    <meta
+        name="description"
+        content="YUVA SETU connects industry demand, district skill intelligence, institutes and students."
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<nav class="navbar">
+
+    <a href="index.html" class="brand">
+        YUVA <span>SETU</span>
+    </a>
+
+    <div class="nav-links" id="navLinks">
+
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#workflow">How It Works</a>
+        <a href="#trends">Skill Trends</a>
+        <a href="#portals">Portals</a>
+
+        <a href="login.html" class="login-link">
+            Login
+        </a>
+
+        <a href="register.html" class="nav-btn">
+            Register
+        </a>
+
+    </div>
+
+    <button
+        class="menu-btn"
+        id="menuBtn"
+        aria-label="Open navigation menu"
+    >
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<header class="hero" id="home">
+
+    <div class="hero-glow hero-glow-one"></div>
+    <div class="hero-glow hero-glow-two"></div>
+
+    <div class="hero-content">
+
+        <div class="hero-badge">
+            <span></span>
+            Skill & Curriculum Intelligence Platform
+        </div>
+
+        <h1>
+            Connecting
+            <span>Skills</span>,
+            Education &
+            Employment
+        </h1>
+
+        <p>
+            YUVA SETU transforms labour-market signals into
+            district-level skill intelligence to help students,
+            institutes, industries and government make better
+            skill-development decisions.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#trends" class="primary-btn">
+                Explore Skill Trends
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="#portals" class="secondary-btn">
+                Explore Portals
+            </a>
+
+        </div>
+
+
+        <div class="hero-stats">
+
+            <div>
+                <strong>District</strong>
+                <span>Skill Intelligence</span>
+            </div>
+
+            <div>
+                <strong>Industry</strong>
+                <span>Demand Analysis</span>
+            </div>
+
+            <div>
+                <strong>Student</strong>
+                <span>Skill Matching</span>
+            </div>
+
+            <div>
+                <strong>Institute</strong>
+                <span>Curriculum Alignment</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="section" id="about">
+
+    <div class="section-tag">
+        About YUVA SETU
+    </div>
+
+    <h2 class="section-title">
+        From labour-market signals to
+        <span>actionable skill intelligence</span>
+    </h2>
+
+    <p class="section-description">
+        Instead of functioning only as a student skill-comparison
+        portal, YUVA SETU creates a continuous ecosystem connecting
+        industry demand, district skill trends, qualifications,
+        curriculum, training and employment outcomes.
+    </p>
+
+
+    <div class="about-grid">
+
+        <article class="info-card">
+
+            <div class="icon-box">
+                <i class="fa-solid fa-industry"></i>
+            </div>
+
+            <h3>Industry Demand</h3>
+
+            <p>
+                Job roles, required skills, proficiency levels and
+                employer demand create the foundation of the platform.
+            </p>
+
+        </article>
+
+
+        <article class="info-card">
+
+            <div class="icon-box">
+                <i class="fa-solid fa-location-dot"></i>
+            </div>
+
+            <h3>District Intelligence</h3>
+
+            <p>
+                Skill demand is analysed according to location instead
+                of depending only on national averages.
+            </p>
+
+        </article>
+
+
+        <article class="info-card">
+
+            <div class="icon-box">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+
+            <h3>Curriculum Alignment</h3>
+
+            <p>
+                Industry-required skills are mapped against courses,
+                curriculum, trainers and equipment.
+            </p>
+
+        </article>
+
+
+        <article class="info-card">
+
+            <div class="icon-box">
+                <i class="fa-solid fa-chart-line"></i>
+            </div>
+
+            <h3>Outcome Feedback</h3>
+
+            <p>
+                Placement and employer feedback continuously improve
+                skill-demand and training recommendations.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     DISTRICT DASHBOARD
+========================= -->
+
+<section class="dashboard-section" id="trends">
+
+    <div class="dashboard-container">
+
+        <div class="dashboard-heading">
+
+            <div>
+                <div class="section-tag">
+                    Live Intelligence Preview
+                </div>
+
+                <h2>
+                    District Skill Demand
+                </h2>
+
+                <p>
+                    Demo data shown below is illustrative.
+                </p>
+            </div>
+
+
+            <div class="dashboard-filters">
+
+                <select id="districtSelect">
+                    <option value="pune">Pune</option>
+                    <option value="jhansi">Jhansi</option>
+                    <option value="gurugram">Gurugram</option>
+                </select>
+
+                <select id="sectorSelect">
+                    <option value="technology">
+                        Technology
+                    </option>
+
+                    <option value="manufacturing">
+                        Manufacturing
+                    </option>
+
+                    <option value="agriculture">
+                        Agriculture
+                    </option>
+
+                    <option value="healthcare">
+                        Healthcare
+                    </option>
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <div class="metric-grid">
+
+            <div class="metric-card">
+
+                <div class="metric-icon">
+                    <i class="fa-solid fa-briefcase"></i>
+                </div>
+
+                <span>High Demand Roles</span>
+
+                <strong id="roleCount">
+                    24
+                </strong>
+
+            </div>
+
+
+            <div class="metric-card">
+
+                <div class="metric-icon">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+
+                <span>Skill Gaps</span>
+
+                <strong id="gapCount">
+                    17
+                </strong>
+
+            </div>
+
+
+            <div class="metric-card">
+
+                <div class="metric-icon">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+
+                <span>Emerging Skills</span>
+
+                <strong id="emergingCount">
+                    8
+                </strong>
+
+            </div>
+
+
+            <div class="metric-card">
+
+                <div class="metric-icon">
+                    <i class="fa-solid fa-building-columns"></i>
+                </div>
+
+                <span>Institutes Analysed</span>
+
+                <strong id="instituteCount">
+                    46
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="analytics-grid">
+
+            <div class="chart-card">
+
+                <div class="card-heading">
+
+                    <div>
+                        <span>Demand Analysis</span>
+                        <h3>Top Skills</h3>
+                    </div>
+
+                    <span class="live-badge">
+                        Demo
+                    </span>
+
+                </div>
+
+
+                <div class="skill-chart">
+
+                    <div class="skill-row">
+
+                        <div class="skill-label">
+                            <span>Python</span>
+                            <span>92%</span>
+                        </div>
+
+                        <div class="bar">
+                            <div
+                                class="bar-value"
+                                style="--value:92%"
+                            ></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-row">
+
+                        <div class="skill-label">
+                            <span>SQL</span>
+                            <span>87%</span>
+                        </div>
+
+                        <div class="bar">
+                            <div
+                                class="bar-value"
+                                style="--value:87%"
+                            ></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-row">
+
+                        <div class="skill-label">
+                            <span>AI / ML</span>
+                            <span>82%</span>
+                        </div>
+
+                        <div class="bar">
+                            <div
+                                class="bar-value"
+                                style="--value:82%"
+                            ></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-row">
+
+                        <div class="skill-label">
+                            <span>Cloud Computing</span>
+                            <span>76%</span>
+                        </div>
+
+                        <div class="bar">
+                            <div
+                                class="bar-value"
+                                style="--value:76%"
+                            ></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-row">
+
+                        <div class="skill-label">
+                            <span>Power BI</span>
+                            <span>69%</span>
+                        </div>
+
+                        <div class="bar">
+                            <div
+                                class="bar-value"
+                                style="--value:69%"
+                            ></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="roles-card">
+
+                <div class="card-heading">
+
+                    <div>
+                        <span>Opportunities</span>
+                        <h3>Top Job Roles</h3>
+                    </div>
+
+                </div>
+
+
+                <div class="role-item">
+
+                    <div class="role-icon">
+                        <i class="fa-solid fa-chart-simple"></i>
+                    </div>
+
+                    <div>
+                        <strong>Data Analyst</strong>
+                        <span>Technology</span>
+                    </div>
+
+                    <div class="demand high">
+                        High
+                    </div>
+
+                </div>
+
+
+                <div class="role-item">
+
+                    <div class="role-icon">
+                        <i class="fa-solid fa-cloud"></i>
+                    </div>
+
+                    <div>
+                        <strong>Cloud Engineer</strong>
+                        <span>Technology</span>
+                    </div>
+
+                    <div class="demand high">
+                        High
+                    </div>
+
+                </div>
+
+
+                <div class="role-item">
+
+                    <div class="role-icon">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+
+                    <div>
+                        <strong>AI Engineer</strong>
+                        <span>Emerging Technology</span>
+                    </div>
+
+                    <div class="demand emerging">
+                        Emerging
+                    </div>
+
+                </div>
+
+
+                <div class="role-item">
+
+                    <div class="role-icon">
+                        <i class="fa-solid fa-car-battery"></i>
+                    </div>
+
+                    <div>
+                        <strong>EV Technician</strong>
+                        <span>Manufacturing</span>
+                    </div>
+
+                    <div class="demand emerging">
+                        Emerging
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     WORKFLOW
+========================= -->
+
+<section class="section workflow-section" id="workflow">
+
+    <div class="section-tag">
+        How It Works
+    </div>
+
+    <h2 class="section-title">
+        One continuous
+        <span>skill intelligence cycle</span>
+    </h2>
+
+
+    <div class="workflow">
+
+        <div class="flow-card">
+            <span>01</span>
+            <i class="fa-solid fa-database"></i>
+            <h3>Data Collection</h3>
+            <p>
+                Jobs, employer surveys, trends and placement outcomes.
+            </p>
+        </div>
+
+        <div class="flow-arrow">
+            <i class="fa-solid fa-arrow-right"></i>
+        </div>
+
+
+        <div class="flow-card">
+            <span>02</span>
+            <i class="fa-solid fa-filter"></i>
+            <h3>Validation</h3>
+            <p>
+                Clean, normalize and validate roles, locations and skills.
+            </p>
+        </div>
+
+        <div class="flow-arrow">
+            <i class="fa-solid fa-arrow-right"></i>
+        </div>
+
+
+        <div class="flow-card">
+            <span>03</span>
+            <i class="fa-solid fa-chart-column"></i>
+            <h3>Demand Engine</h3>
+            <p>
+                Generate district, role and skill-level demand intelligence.
+            </p>
+        </div>
+
+        <div class="flow-arrow">
+            <i class="fa-solid fa-arrow-right"></i>
+        </div>
+
+
+        <div class="flow-card">
+            <span>04</span>
+            <i class="fa-solid fa-code-compare"></i>
+            <h3>Skill Mapping</h3>
+            <p>
+                Connect job roles, skills, qualifications and curriculum.
+            </p>
+        </div>
+
+        <div class="flow-arrow">
+            <i class="fa-solid fa-arrow-right"></i>
+        </div>
+
+
+        <div class="flow-card">
+            <span>05</span>
+            <i class="fa-solid fa-lightbulb"></i>
+            <h3>Recommendation</h3>
+            <p>
+                Generate actionable guidance for students and institutes.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PORTALS
+========================= -->
+
+<section class="portal-section" id="portals">
+
+    <div class="portal-container">
+
+        <div class="section-tag">
+            Platform Access
+        </div>
+
+        <h2 class="section-title">
+            One ecosystem.
+            <span>Four connected stakeholders.</span>
+        </h2>
+
+
+        <div class="portal-grid">
+
+            <a
+                href="student/login.html"
+                class="portal-card student-card"
+            >
+
+                <div class="portal-icon">
+                    <i class="fa-solid fa-user-graduate"></i>
+                </div>
+
+                <h3>Student Portal</h3>
+
+                <p>
+                    Compare your skills with district-level job
+                    requirements and discover your skill gaps.
+                </p>
+
+                <span>
+                    Student Login
+                    <i class="fa-solid fa-arrow-right"></i>
+                </span>
+
+            </a>
+
+
+            <a
+                href="institute/login.html"
+                class="portal-card"
+            >
+
+                <div class="portal-icon">
+                    <i class="fa-solid fa-building-columns"></i>
+                </div>
+
+                <h3>Institute Portal</h3>
+
+                <p>
+                    Analyse curriculum alignment, trainer capacity,
+                    equipment gaps and placement outcomes.
+                </p>
+
+                <span>
+                    Institute Login
+                    <i class="fa-solid fa-arrow-right"></i>
+                </span>
+
+            </a>
+
+
+            <a
+                href="industry/login.html"
+                class="portal-card"
+            >
+
+                <div class="portal-icon">
+                    <i class="fa-solid fa-industry"></i>
+                </div>
+
+                <h3>Industry Portal</h3>
+
+                <p>
+                    Submit job roles, validate demand and define
+                    required skills and proficiency levels.
+                </p>
+
+                <span>
+                    Industry Login
+                    <i class="fa-solid fa-arrow-right"></i>
+                </span>
+
+            </a>
+
+
+            <a
+                href="admin/login.html"
+                class="portal-card"
+            >
+
+                <div class="portal-icon">
+                    <i class="fa-solid fa-landmark"></i>
+                </div>
+
+                <h3>Government Portal</h3>
+
+                <p>
+                    Monitor district intelligence, curriculum gaps,
+                    training needs and employment outcomes.
+                </p>
+
+                <span>
+                    Admin Login
+                    <i class="fa-solid fa-arrow-right"></i>
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section class="cta">
+
+    <div>
+
+        <span>
+            BUILDING A SKILL-READY INDIA
+        </span>
+
+        <h2>
+            Turn skill gaps into
+            opportunities.
+        </h2>
+
+        <p>
+            Connect education with real industry demand.
+        </p>
+
+        <a href="register.html" class="primary-btn">
+            Get Started
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="footer-brand">
+        YUVA <span>SETU</span>
+    </div>
+
+    <p>
+        Skills & Curriculum Intelligence Platform
+    </p>
+
+    <p class="copyright">
+        © 2026 YUVA SETU
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
