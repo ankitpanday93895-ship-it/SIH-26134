@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Registration | YUVA SETU</title>
+
+    <link rel="stylesheet" href="student.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+<div class="auth-page">
+
+    <!-- LEFT SIDE -->
+
+    <div class="auth-left">
+
+        <a href="../index.html" class="logo">
+            YUVA <span>SETU</span>
+        </a>
+
+        <div class="left-content">
+
+            <span class="tag">
+                CREATE STUDENT ACCOUNT
+            </span>
+
+            <h1>
+                Start your
+                <span>skill journey.</span>
+            </h1>
+
+            <p>
+                Create your YUVA SETU profile and discover how
+                your skills match real industry demand.
+            </p>
+
+
+            <div class="features">
+
+                <div>
+                    <i class="fa-solid fa-location-dot"></i>
+                    District Based Demand
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-chart-pie"></i>
+                    Skill Match Percentage
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-bullseye"></i>
+                    Target Job Analysis
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-route"></i>
+                    Learning Recommendations
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- RIGHT SIDE -->
+
+    <div class="auth-right">
+
+        <div class="form-card">
+
+            <div class="form-heading">
+
+                <span>
+                    GET STARTED
+                </span>
+
+                <h2>
+                    Create Account
+                </h2>
+
+                <p>
+                    Register as a student on YUVA SETU.
+                </p>
+
+            </div>
+
+
+            <form id="registerForm">
+
+                <!-- NAME -->
+
+                <div class="input-group">
+
+                    <label>
+                        Full Name
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-user"></i>
+
+                        <input
+                            type="text"
+                            id="registerName"
+                            placeholder="Enter your full name"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="input-group">
+
+                    <label>
+                        Email Address
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <input
+                            type="email"
+                            id="registerEmail"
+                            placeholder="student@example.com"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- PHONE -->
+
+                <div class="input-group">
+
+                    <label>
+                        Mobile Number
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        <input
+                            type="tel"
+                            id="registerPhone"
+                            placeholder="Enter mobile number"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- PASSWORD -->
+
+                <div class="input-group">
+
+                    <label>
+                        Password
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input
+                            type="password"
+                            id="registerPassword"
+                            placeholder="Create password"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- CONFIRM -->
+
+                <div class="input-group">
+
+                    <label>
+                        Confirm Password
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            placeholder="Confirm password"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="registerMessage"
+                    class="form-message"
+                ></div>
+
+
+                <button
+                    type="submit"
+                    class="submit-btn"
+                >
+
+                    Create Student Account
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+
+                <div class="divider">
+                    <span>OR</span>
+                </div>
+
+
+                <p class="register-text">
+
+                    Already registered?
+
+                    <a href="login.html">
+                        Student Login
+                    </a>
+
+                </p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="student.js"></script>
+
+</body>
+</html>
